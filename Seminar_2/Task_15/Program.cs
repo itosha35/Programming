@@ -1,4 +1,4 @@
-﻿bool Vacation(int num)
+﻿bool Vacation(byte num)
 {
  if (num == 6 || num == 7)
     return true;
@@ -6,11 +6,11 @@ else return false;
 }
 
 bool check = false;
-int day = 0;
+byte day = 0;
 while (!check)
 {
  Console.WriteLine("Input week day number");
- day = Convert.ToInt32(Console.ReadLine());
+ day = Convert.ToByte(Console.ReadLine());
  if (day > 0 && day < 8)
     check=true;
 }
