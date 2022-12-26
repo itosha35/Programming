@@ -1,6 +1,6 @@
 ﻿bool Palindrom(int number)
 {
- int decim = 10;
+  int decim = 10;
  int temp = number;
  int revers = 0;
  while (number % decim < number)
@@ -19,7 +19,7 @@
  if (number == revers)
    return true;
  else return false;
- }
+ }  
 }
 
 int num = 0;
