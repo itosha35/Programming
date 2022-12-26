@@ -1,0 +1,4 @@
+﻿ void Quadrant(int quad)
+ {
+
+ }
