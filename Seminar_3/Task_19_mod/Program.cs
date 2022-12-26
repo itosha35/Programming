@@ -3,14 +3,14 @@
     int temp = number;
     int revers = 0;
     while (temp / 10 > 0)
-        {
-            revers = revers*10 + temp % 10;
-            temp = temp / 10;
-        }  
-     revers = revers*10 + temp % 10;
+    {
+        revers = revers * 10 + temp % 10;
+        temp = temp / 10;
+    }
+    revers = revers * 10 + temp % 10;
     if (number == revers)
-            return true;
-        else return false;
+        return true;
+    else return false;
 }
 
 int num = 0;
