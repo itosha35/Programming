@@ -3,17 +3,21 @@
     int[] mas = new int[size];
     for (int i = 0; i < size; i++)
     {
-        Console.Write($"Set {i+1} : ");
-        mas[i] = Convert.ToInt32(Console.ReadLine());        
+        Console.Write($"Set {i + 1} : ");
+        mas[i] = Convert.ToInt32(Console.ReadLine());
     }
     Console.WriteLine();
     return mas;
 }
 void ShowMas(int[] mas)
 {
-    Console.Write("|");
+    Console.Write("[");
     for (int i = 0; i < mas.Length; i++)
-        Console.Write($"{mas[i]}|");
+    {
+        if (i != mas.Length-1) Console.Write($"{mas[i]},");
+        else Console.Write($"{mas[i]}]");
+    }
+
     Console.WriteLine();
 }
 Console.WriteLine("Programm Set - Print Array");
