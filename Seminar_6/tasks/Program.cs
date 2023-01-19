@@ -1,8 +1,6 @@
 ﻿/* bool TreangleCheck(int a, int b, int c)
 {
-    if (a < b + c & b < a + c & c < a + b)
-        return true;
-    else return false;
+    return (a < b + c && b < a + c && c < a + b);
 }
 Console.WriteLine("Treangle ceck Program");
 Console.Write("input a = ");
@@ -55,15 +53,21 @@ void ShowMas(int[] mas)
     }
     Console.WriteLine();
 }
-int[] SetMas(int size)
+int[] SetMas(int size, int min, int max)
 {
     int[] mas = new int[size];
     for (int i = 0; i < size; i++)
-        mas[i] = new Random().Next(0, 11);
+        mas[i] = new Random().Next(min, max+1);
     return mas;
 }
 Console.WriteLine("Program Copy Mas");
-int[] mas1 = SetMas
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("input b = ");
-int b = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input size = ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input MIN value = ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input MAX value = ");
+int max = Convert.ToInt32(Console.ReadLine());
+int[] mas1 = SetMas(size,min,max);
+ShowMas(mas1);
+int[] mas2 = CopyMas(mas1);
+ShowMas(mas2);
