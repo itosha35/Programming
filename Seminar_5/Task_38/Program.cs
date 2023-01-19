@@ -1,9 +1,9 @@
-﻿double[] SetMas(int size, int min, int max)
+﻿double[] SetMas(int size, int min, int max)//вещественные числа, при выводе неплохо спросить знаки после запятой
 {
     double[] mas = new double[size];
     for (int i = 0; i < size; i++)
         mas[i] = new Random().Next(min, max) + new Random().NextDouble();
-    //Max value of Rand.INT will be max-1, but Random.Double can be max 1, so, everything is cool;
+    //Max value of Rand.INT will be (max-1), but Random.Double can be max = 1, so, everything is cool;
     return mas;
 }
 void ShowMas(double[] mas, int digits)
@@ -18,7 +18,7 @@ void ShowMas(double[] mas, int digits)
 }
 double MaxMinDif(double[] mas, int digits)
 {
-    int maxi = 0; // for indexes, int has lower memory requiremens caompare to double type
+    int maxi = 0; // for indexes, int has lower memory requiremens compare to double type
     int mini = 0;
     for (int i = 1; i < mas.Length; i++)
     {
