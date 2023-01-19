@@ -4,7 +4,9 @@ this is for My homework and practice needs in programming stuff
 * Seminar 1
 * Seminar 2
 * Seminar 3
+* Seminar 4
+* Seminar 5
 
 Languages presented:
 1. C#
-2. 
+2. <awating Python>
