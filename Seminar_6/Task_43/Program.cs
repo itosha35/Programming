@@ -24,12 +24,13 @@ Console.Write("LINE-2, please, set k2 = ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("LINE-2, please, set b2 = ");
 double b2 = Convert.ToDouble(Console.ReadLine());
-if (!CheckParallel(k1, k2))
+if (!CheckParallel(k1, k2) && (k1 != k2) && (b1 != b2))
 {
     double[] point = PointIntersec(k1, k2, b1, b2);
-    Console.WriteLine(b1 > 0 ? $"LINE-1: Y(X)= {k1}*X + {b1}" : $"LINE-1: Y(X)= {k1}*X - {Math.Abs(b1)}");
-    Console.WriteLine(b2 > 0 ? $"LINE-2: Y(X)= {k2}*X + {b2}" : $"LINE-1: Y(X)= {k2}*X - {Math.Abs(b2)}");
+    Console.WriteLine(b1 >= 0 ? $"LINE-1: Y(X)= {k1}*X + {b1}" : $"LINE-1: Y(X)= {k1}*X - {Math.Abs(b1)}");
+    Console.WriteLine(b2 >= 0 ? $"LINE-2: Y(X)= {k2}*X + {b2}" : $"LINE-1: Y(X)= {k2}*X - {Math.Abs(b2)}");
     Console.WriteLine($"Lines intersection point has [X, Y] = [{Math.Round(point[0], 1)}, {Math.Round(point[1], 1)}]");
     Console.WriteLine(LinesAngle(k1, k2) == 90 ? "Lines are Perpendicullar" : $"Angle between the lines is = {LinesAngle(k1, k2)} deg");
 }
+else if ((k1 == k2) && (b1 == b2)) Console.WriteLine("Lines matches each other");
 else Console.WriteLine("Lines are parallel, there is no intersection point");
