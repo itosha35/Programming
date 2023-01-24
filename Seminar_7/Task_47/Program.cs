@@ -27,4 +27,5 @@ int m = InputGen("Please, input Columns of Array = ");
 int min = InputGen("Please, input MIN value in Array = ");
 int max = InputGen("Please, input MAX value in Array = ");
 int digit = InputGen("Please, input Digits after comma = ");
-ShowMasDouble(SetMasDouble(n, m, min, max), digit);
+double[,] mas2D = SetMasDouble(n, m, min, max);
+ShowMasDouble(mas2D, digit);
