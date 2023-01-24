@@ -6,6 +6,8 @@ this is for My homework and practice needs in programming stuff
 * Seminar 3
 * Seminar 4
 * Seminar 5
+* Seminar 6
+* Seminar 7
 
 Languages presented:
 1. C#
