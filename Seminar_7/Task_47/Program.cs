@@ -22,10 +22,10 @@ int InputGen(string message)//Input Generator of Integer data
 }
 Console.Clear();
 Console.WriteLine("Program of Double 2D Array generator");
-int n = InputGen("Please, input Rows of Array = ");
-int m = InputGen("Please, input Columns of Array = ");
-int min = InputGen("Please, input MIN value in Array = ");
-int max = InputGen("Please, input MAX value in Array = ");
-int digit = InputGen("Please, input Digits after comma = ");
+int n = InputGen("Please, input Rows of Array");
+int m = InputGen("Please, input Columns of Array");
+int min = InputGen("Please, input MIN value in Array");
+int max = InputGen("Please, input MAX value in Array");
+int digit = InputGen("Please, input Digits after comma");
 double[,] mas2D = SetMasDouble(n, m, min, max);
 ShowMasDouble(mas2D, digit);
