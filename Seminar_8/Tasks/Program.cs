@@ -78,18 +78,16 @@ void Show2dArray(int[,] array)
 }
 int[] MinArrayIndex(int[,] mas)
 {
-    int[] indexes = new int[2];
+    int[] indexes = new int[2];//index of row and index of column with MIN value
     indexes[0] = 0;
     indexes[1] = 0;
     for (int i = 0; i < mas.GetLength(0); i++)
-        for (int j = 1; j < mas.GetLength(1); j++)
-        {
+        for (int j = 0; j < mas.GetLength(1); j++)        
             if (mas[i, j] < mas[indexes[0], indexes[1]])
             {
                 indexes[0] = i;
                 indexes[1] = j;
-            }
-        }
+            }        
     return indexes;
 }
 int[,] RemoveMinIndexes(int[] indexes, int[,] mas)
@@ -100,7 +98,7 @@ int[,] RemoveMinIndexes(int[] indexes, int[,] mas)
     for (int i = 0; i < mas.GetLength(0); i++)
     {
         if (i != indexes[0])
-        {
+        {            
             for (int j = 0; j < mas.GetLength(1); j++)
             {
                 if (j != indexes[1])
@@ -118,5 +116,7 @@ int[,] RemoveMinIndexes(int[] indexes, int[,] mas)
 }
 int[,] mas = CreateRandom2dArray();
 Show2dArray(mas);
-int[,] mas2 = RemoveMinIndexes(MinArrayIndex(mas), mas);
+int[] indexes = MinArrayIndex(mas);
+int[,] mas2 = RemoveMinIndexes(indexes, mas);
+Console.WriteLine($"MIN = [{indexes[0]} : {indexes[1]}] = {mas[indexes[0],indexes[1]]}");
 Show2dArray(mas2);
