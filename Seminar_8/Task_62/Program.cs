@@ -8,7 +8,10 @@ void Show2dArray(int[,] mas)
     for (int i = 0; i < mas.GetLength(0); i++)
     {
         for (int j = 0; j < mas.GetLength(1); j++)
-            Console.Write(mas[i, j] + "\t");
+        {
+            if (mas[i, j] < 10) Console.Write("0" + mas[i, j] + "\t");
+            else Console.Write(mas[i, j] + "\t");
+        }
         Console.WriteLine();
     }
 }
@@ -26,12 +29,8 @@ int[,] FillSpiralArray(int rows, int columns)
             {
                 num++;
                 mas[cycle, j] = num;
-                if (num >= rows * columns)
-                {
-                    Console.WriteLine($"Cycles = {cycle}");
-                    return mas;
-                }
-            }            
+                if (num >= rows * columns) return mas;
+            }
             dir = 2;
         }
         if (dir == 2)
@@ -40,12 +39,8 @@ int[,] FillSpiralArray(int rows, int columns)
             {
                 num++;
                 mas[i, columns - cycle - 1] = num;
-                if (num >= rows * columns)
-                {
-                    Console.WriteLine($"Cycles = {cycle}");
-                    return mas;
-                }
-            }            
+                if (num >= rows * columns) return mas;
+            }
             dir = 3;
         }
 
@@ -55,26 +50,18 @@ int[,] FillSpiralArray(int rows, int columns)
             {
                 num++;
                 mas[rows - cycle - 1, j] = num;
-                if (num >= rows * columns)
-                {
-                    Console.WriteLine($"Cycles = {cycle}");
-                    return mas;
-                }
-            }            
+                if (num >= rows * columns) return mas;
+            }
             dir = 4;
         }
         if (dir == 4)
         {
-            for (int i = rows - 1 - 1-cycle; i >= 1 + cycle; i--)
+            for (int i = rows - 1 - 1 - cycle; i >= 1 + cycle; i--)
             {
                 num++;
                 mas[i, cycle] = num;
-                if (num >= rows * columns)
-                {
-                    Console.WriteLine($"Cycles = {cycle}");
-                    return mas;
-                }
-            }            
+                if (num >= rows * columns) return mas;
+            }
             dir = 1;
             cycle++;
         }
@@ -94,7 +81,7 @@ int[,] FillSpiralArray(int rows, int columns)
 */
 Console.Clear();
 Console.WriteLine("Program Spiral Array filling");
-int rows = InputGen("Please, input Rows of 3d Array");
-int columns = InputGen("Please, input Columns of 3d Array");
+int rows = InputGen("Please, input Rows of 2d Array");
+int columns = InputGen("Please, input Columns of 2d Array");
 int[,] mas = FillSpiralArray(rows, columns);
 Show2dArray(mas);
