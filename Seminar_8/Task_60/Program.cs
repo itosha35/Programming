@@ -57,7 +57,7 @@ bool CheckNumQuantity(int rows, int columns, int layers) // max 90 numbers consi
     return (rows * columns * layers) <= 90;
 }
 Console.Clear();
-Console.WriteLine("Program 3d Array fill with unig 2-digits numbers");
+Console.WriteLine("Program 3d Array fill with uniq 2-digits numbers");
 int rows = InputGen("Please, input Rows of 3d Array");
 int columns = InputGen("Please, input Columns of 3d Array");
 int layers = InputGen("Please, input Layers of 3d Array");
