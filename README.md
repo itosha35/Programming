@@ -8,7 +8,8 @@ this is for My homework and practice needs in programming stuff
 * Seminar 5
 * Seminar 6
 * Seminar 7
-* Seminar 8
+* Seminar 8 (spiral 2D Array filling)
+* Seminar 9 (RECURSIVE, Akkerman function)
 
 Languages presented:
 1. C#
