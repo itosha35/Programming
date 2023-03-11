@@ -1,6 +1,6 @@
 # Programming
 this is for My homework and practice needs in programming stuff
-# The next Seminars are already included
+# The next Seminars are already included for C#
 * Seminar 1
 * Seminar 2
 * Seminar 3
@@ -11,6 +11,9 @@ this is for My homework and practice needs in programming stuff
 * Seminar 8 (spiral 2D Array filling)
 * Seminar 9 (RECURSIVE, Akkerman function)
 
+# The next seminars are already included for Python
+* Seminar 1
+
 Languages presented:
 1. C#
-2. <awating Python>
+2. PYTHON
