@@ -5,7 +5,6 @@ mas = [61,228,9]
 print(mas)
 cmas = []
 n = int(math.log10(max(mas)))
-num = ''
 for i in mas:
     if int(math.log10(i)) < n:
         i = i * int(math.pow(10, (n - int(math.log10(i))))) + \
