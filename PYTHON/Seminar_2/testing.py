@@ -43,3 +43,13 @@ print(list_1)
 
 list_1 = [i for i in range(1,11) if i % 2 == 0]
 print(list_1)
+
+#char.isdigit()
+s="1 2 3 4"
+s = [str(s) for s in str.split(s) if s.isdigit()]
+print(s)
+# print(n)
+# A = [0] * n
+# for i in range(n):
+#    A[i] = [0] * len(mas)
+# print(A)
