@@ -1,19 +1,17 @@
 import math
 
-#mas = [501, 2, 1, 98, 9, 11, 20, 100, 9978, 1234]
-mas = [61,228,10,0]
-print(mas)
-cmas = []
-n = int(math.log10(max(mas)))
-for i in mas:
-    if i != 0:
-        if int(math.log10(i)) < n:
-            i = i * int(math.pow(10, (n - int(math.log10(i))))) + \
-                int(math.pow(10, (n - int(math.log10(i)))))-1
-    cmas.append(i)        
+# mas = [8, 87, 7, 1, 11]
+#mas = [9501, 2, 19, 98, 9, 11, 20, 100, 9278, 1234, 0, 1, 21, 1, 1, 1]
+#mas = [210, 1234, 0, 1, 21, 18, 9, 91]
+#mas = [61,228,10,0]
+mas = [61,228,9]
 num = ''
-for i in range(len(cmas)):
-    k = cmas.index(max(cmas))
-    num = num + str(mas[k])
-    cmas[k] = -1    
+for i in range(len(mas)-1):
+    for j in range(len(mas)-i-1):
+        if int(str(mas[j])+str(mas[j+1])) < int(str(mas[j+1])+str(mas[j])):
+            temp = mas[j]
+            mas[j] = mas[j+1]
+            mas[j+1] = temp
+for i in mas:
+    num += str(i)
 print(num)
