@@ -1,3 +1,6 @@
+import itertools
+
+
 print(eval("1+2+3"))
 
 list_1 = []
@@ -53,3 +56,7 @@ print(s)
 # for i in range(n):
 #    A[i] = [0] * len(mas)
 # print(A)
+horses = [1, 2, 3, 4]
+races = itertools.permutations(horses)
+print(races)
+print(list(itertools.permutations(horses)))
