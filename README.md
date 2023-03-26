@@ -13,6 +13,9 @@ this is for My homework and practice needs in programming stuff
 
 # The next seminars are already included for Python
 * Seminar 1
+* Seminar_2
+* Seminar_3
+* Seminar_4
 
 Languages presented:
 1. C#
