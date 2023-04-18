@@ -1,9 +1,23 @@
-h1{
-    color: #ce606064;
+h1 {
+    color: #eb0e0eaa;
 }
-h56{
-    color: blue;
+
+body {
+    background-color: #d0d0eb5a;
 }
-body{
-    background-color: aquamarine;
+
+.TYPE_1 {
+    font-size: 1.5rem;
+}
+
+img {
+    height: 350px;
+}
+
+.Bobcat {
+    height: 400px;    
+}
+
+ul {
+    list-style-type: square;
 }
