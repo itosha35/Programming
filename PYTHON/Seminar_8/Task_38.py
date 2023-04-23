@@ -1,5 +1,7 @@
 import os
 
+STRIP = '-----------------------'
+
 
 def show_contact():
     with open(r'data.txt', 'r+', encoding='utf-8') as file:
@@ -25,8 +27,8 @@ def new_contact():
     firstname = input_firstname()
     lastname = input_lastname()
     phoneNum = input("Введи телефон: ")
-    contactDetails = ("["+firstname + " " + lastname +
-                      ", " + phoneNum + "]\n")
+    contactDetails = (firstname + " " + lastname +
+                      ", " + phoneNum + "\n")
     with open(r'data.txt', 'a', encoding='utf-8') as file:
         file.write(contactDetails)
     print(contactDetails + "\n Контакт успешно сохранён!")
@@ -39,7 +41,6 @@ def search_contact():
     searchname = firstchar.upper() + remname
     with open(r'data.txt', 'r+', encoding='utf-8') as file:
         filecontents = file.readlines()
-
     found = False
     for line in filecontents:
         if searchname in line:
@@ -72,8 +73,8 @@ def change_person():
     firstname = input_firstname()
     lastname = input_lastname()
     phoneNum = input("Введи телефон: ")
-    contactDetails = ("["+firstname + " " + lastname +
-                      ", " + phoneNum + "]\n")
+    contactDetails = (firstname + " " + lastname +
+                      ", " + phoneNum + "\n")
     with open(r'data.txt', 'a', encoding='utf-8') as file:
         file.write(contactDetails)
     print(contactDetails + "\nКонтакт успешно сохранён!")
@@ -101,33 +102,38 @@ def delete_contact():
 
 def main():
     print("\nМеню\n")
-    print("1. Показать все контакты")
-    print("2. Добавить новый контакт")
-    print("3. Поиск контакта")
-    print("4. Изменение контакта")
-    print("5. Удаление контакта")
-    print("6. Выход")
-    choice = input("Введи нужное: ")
-    if choice == "1":
+    print("1-Показать все контакты")
+    print("2-Добавить новый контакт")
+    print("3-Поиск контакта")
+    print("4-Изменение контакта")
+    print("5-Удаление контакта")
+    print("6-Выход")
+    choice = input("Введи нужное: ")    
+    if choice == "1":        
+        print(STRIP)
         print(show_contact())
         main()
     elif choice == "2":
+        print(STRIP)
         print(new_contact())
         main()
     elif choice == "3":
+        print(STRIP)
         print(search_contact())
         main()
     elif choice == "4":
+        print(STRIP)
         change_person()
         main()
     elif choice == "5":
+        print(STRIP)
         delete_contact()
         main()
     elif choice == "6":
         print("До свидания!")
     else:
-        print("Пожалуйста, предоставьте действительные данные!\n")
-        input("Нажмите Enter, чтобы продолжить ...")
+        print("Пожалуйста, введите корректные данные!\n")
+        input("Нажмите ENTER, чтобы продолжить ...")
         main()
 
 

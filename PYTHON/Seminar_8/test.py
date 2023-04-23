@@ -4,6 +4,9 @@ import os
 
 with open(r'data.txt', 'r+') as file:
     #s = ' '.join(colors)
-    line = file.read()
+    line = file.readlines()
+    contacts = ''
+    for cont in line:
+        contacts +=''.join(cont)
 
-print(line)
+print(contacts)
