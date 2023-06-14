@@ -1,0 +1,32 @@
+июн. 14, 2023 11:23:50 PM JAVA.Lesson_3.logger main
+WARNING: logger off
+июн. 14, 2023 11:23:50 PM JAVA.Lesson_3.logger main
+INFO: test
+июн. 14, 2023 11:23:50 PM JAVA.Lesson_3.logger main
+WARNING: logsPath
+июн. 14, 2023 11:23:50 PM JAVA.Lesson_3.logger main
+INFO: 12345
+июн. 14, 2023 11:24:25 PM JAVA.Lesson_3.logger main
+WARNING: logger off
+июн. 14, 2023 11:24:25 PM JAVA.Lesson_3.logger main
+INFO: test
+июн. 14, 2023 11:24:25 PM JAVA.Lesson_3.logger main
+WARNING: logsPath
+июн. 14, 2023 11:24:25 PM JAVA.Lesson_3.logger main
+INFO: 12345
+июн. 14, 2023 11:24:33 PM JAVA.Lesson_3.logger main
+WARNING: logger off
+июн. 14, 2023 11:24:33 PM JAVA.Lesson_3.logger main
+INFO: test
+июн. 14, 2023 11:24:33 PM JAVA.Lesson_3.logger main
+WARNING: logsPath
+июн. 14, 2023 11:24:33 PM JAVA.Lesson_3.logger main
+INFO: 12345
+июн. 14, 2023 11:24:43 PM JAVA.Lesson_3.logger main
+WARNING: logger off
+июн. 14, 2023 11:24:43 PM JAVA.Lesson_3.logger main
+INFO: test
+июн. 14, 2023 11:24:43 PM JAVA.Lesson_3.logger main
+WARNING: logsPath
+июн. 14, 2023 11:24:43 PM JAVA.Lesson_3.logger main
+INFO: 12345

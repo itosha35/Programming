@@ -1,0 +1,22 @@
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO: Initial array:  4 9 5 1 0 2 6 6 2 4
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  4 5 1 0 2 6 6 2 4 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  4 1 0 2 5 6 2 4 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  1 0 2 4 5 2 4 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  0 1 2 4 2 4 5 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  0 1 2 2 4 4 5 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  0 1 2 2 4 4 5 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  0 1 2 2 4 4 5 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  0 1 2 2 4 4 5 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO:  0 1 2 2 4 4 5 6 6 9
+июн. 15, 2023 12:22:47 AM JAVA.Seminar_2.task_2 main
+INFO: Sorting is Completed...
