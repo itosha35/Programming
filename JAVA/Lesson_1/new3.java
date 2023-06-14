@@ -19,6 +19,5 @@ public class new3 {
         }
         System.out.println(Arrays.toString(array));
     }
-} {
-    
-}
+} 
+
