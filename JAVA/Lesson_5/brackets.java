@@ -36,7 +36,7 @@ public class brackets {
         map.put('>', '<');
         for (Character item : symbols) {
             if (map.containsValue(item)) {
-                stack.push(item);
+                stack.push(item);                
             }
             if (map.containsKey(item)) {
                 if (stack.empty() || stack.pop() != map.get(item)) {
