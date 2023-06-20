@@ -29,7 +29,7 @@ public class home_task {
     }
 
     public static int findMin(ArrayList<Integer> list) {
-        Integer min = 100;
+        Integer min = list.get(0);
         for (Integer i : list) {
             if (i <= min) {
                 min = i;
@@ -40,7 +40,7 @@ public class home_task {
     }
 
     public static int findMax(ArrayList<Integer> list) {
-        Integer max = -1;
+        Integer max = list.get(0);
         for (Integer i : list) {
             if (i >= max) {
                 max = i;
