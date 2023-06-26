@@ -19,7 +19,7 @@ import java.util.Map;
 
 // Вывести данные по сотрудникам с фамилией Иванов.
 
-public class sample_1 {
+public class less_5_1 {
     public static void main(String[] args) {
         Map<Integer, String> passport = new HashMap<>();
         passport.put(123456, "Иванов");
