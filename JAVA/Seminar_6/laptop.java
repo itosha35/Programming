@@ -26,7 +26,7 @@ public class laptop {
         this.ram = "n/a";
         this.hdd = "n/a";
         this.weight = 0;
-        this.os_type = "NONE";
+        this.os_type = "n/a";
     }
 
     public laptop(String brand, String model, String color, String ram, String hdd, Integer weight) {
@@ -39,7 +39,7 @@ public class laptop {
         this.ram = "n/a";
         this.hdd = "n/a";
         this.weight = 0;
-        this.os_type = "NONE";
+        this.os_type = "n/a";
     }
 
     public Boolean getNew_one() {
@@ -118,8 +118,13 @@ public class laptop {
     public String toString() {
         String description = new String();
         String sep = "; ";
+        String used = "";
+        if (new_one)
+            used = "NEW";
+        else
+            used = "USED";
         description = brand + sep + model + sep + color + sep + "RAM:" + ram + sep + "HDD:" + hdd + sep + "WEIGHT="
-                + Integer.toString(weight);
+                + Integer.toString(weight) + sep + used;
         return description;
     }
 
@@ -143,5 +148,17 @@ public class laptop {
     public Map<String, String> setfilter() {
         return setfilter("n/a", "n/a", "n/a", "n/a", "n/a",
                 "n/a");
+    }
+
+    public Boolean equalto(laptop laptop) {
+        if ((this.getBrand().equalsIgnoreCase(laptop.getBrand()) || laptop.getBrand().equalsIgnoreCase("n/a")) &&
+                (this.getColor().equalsIgnoreCase(laptop.getColor()) || laptop.getColor().equalsIgnoreCase("n/a")) &&
+                (this.getHdd().equalsIgnoreCase(laptop.getHdd()) || laptop.getHdd().equalsIgnoreCase("n/a")) &&
+                (this.getRam().equalsIgnoreCase(laptop.getRam()) || laptop.getRam().equalsIgnoreCase("n/a")) &&
+                (this.getOs_type().equalsIgnoreCase(laptop.getOs_type()) || laptop.getOs_type().equalsIgnoreCase("n/a"))
+                /*&& (this.getNew_one() == laptop.getNew_one())*/) {
+            return true;
+        } else
+            return false;
     }
 }

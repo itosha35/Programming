@@ -22,7 +22,7 @@ public class program {
             System.out.println("2 - SEARCH (input parameters & show)");
             System.out.println("3 - EXIT");
             System.out.print("Please, set what You want to do: ");
-            int choice = input.nextInt();
+            int choice = input.nextInt();             
             switch (choice) {
                 case (1): {
                     System.out.println("------------------------");
@@ -35,8 +35,70 @@ public class program {
                 case (2): {
                     ArrayList<laptop> filtered = new ArrayList<laptop>();
                     laptop dummy = new laptop();
-
-                    showNoteBooks(filtered);
+                    Boolean parset = false;
+                    while (!parset) {
+                        System.out.println("Please, chose parameter for Filter");
+                        System.out.println("1 - BRAND");
+                        System.out.println("2 - COLOR");
+                        System.out.println("3 - HDD");
+                        System.out.println("4 - RAM");
+                        System.out.println("5 - SYSTEM");
+                        System.out.println("6 - Close Filter");
+                        System.out.print("Input Your choise: ");
+                        choice = input.nextInt();
+                        String line = "";
+                        switch (choice) {
+                            case (1): {
+                                System.out.print("Input Brand: ");
+                                line = input.next().toString();
+                                dummy.setBrand(line);
+                                break;
+                            }
+                            case (2): {
+                                System.out.print("Input Color: ");
+                                line = input.next().toString();
+                                dummy.setColor(line);
+                                break;
+                            }
+                            case (3): {
+                                System.out.print("Input HDD: ");
+                                line = input.next().toString();
+                                dummy.setHdd(line);
+                                break;
+                            }
+                            case (4): {
+                                System.out.print("Input RAM: ");
+                                line = input.next().toString();
+                                dummy.setRam(line);
+                                break;
+                            }
+                            case (5): {
+                                System.out.print("Input OS System: ");
+                                line = input.next().toString();
+                                dummy.setOs_type(line);
+                                break;
+                            }
+                            case (6): {
+                                System.out.println("---FILTER CREATED---");
+                                System.out.println(dummy);
+                                System.out.println("--------------------");
+                                parset = true;
+                                break;
+                            }
+                            default: {
+                                parset = true;
+                                break;
+                            }
+                        }
+                    }                    
+                    for (laptop lap : notes) {
+                        if (lap.equalto(dummy)){
+                            filtered.add(lap);
+                        }
+                    }                    
+                    System.out.println("Filterred elements: ");
+                    showNoteBooks(filtered);                    
+                    System.out.println("--------------------");
                     main(args);
                     break;
                 }
@@ -89,8 +151,8 @@ public class program {
         return set;
     }
 
-    public static void showNoteBooks(ArrayList<laptop> notes) {
-        for (laptop laptop : notes) {
+    public static void showNoteBooks(ArrayList<laptop> set) {
+        for (laptop laptop : set) {
             System.out.println(laptop);
         }
     }
