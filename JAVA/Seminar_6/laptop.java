@@ -1,6 +1,5 @@
 package Seminar_6;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,11 +25,10 @@ public class laptop {
         this.ram = "n/a";
         this.hdd = "n/a";
         this.weight = 0;
-        this.os_type = "n/a";
+        this.os_type = "NONE";
     }
 
     public laptop(String brand, String model, String color, String ram, String hdd, Integer weight) {
-
         this.imei = "n/a";
         this.new_one = true;
         this.brand = "n/a";
@@ -124,7 +122,7 @@ public class laptop {
         else
             used = "USED";
         description = brand + sep + model + sep + color + sep + "RAM:" + ram + sep + "HDD:" + hdd + sep + "WEIGHT="
-                + Integer.toString(weight) + sep + used;
+                + Integer.toString(weight) + sep + "OS:" + os_type + sep + used;
         return description;
     }
 
@@ -155,8 +153,8 @@ public class laptop {
                 (this.getColor().equalsIgnoreCase(laptop.getColor()) || laptop.getColor().equalsIgnoreCase("n/a")) &&
                 (this.getHdd().equalsIgnoreCase(laptop.getHdd()) || laptop.getHdd().equalsIgnoreCase("n/a")) &&
                 (this.getRam().equalsIgnoreCase(laptop.getRam()) || laptop.getRam().equalsIgnoreCase("n/a")) &&
-                (this.getOs_type().equalsIgnoreCase(laptop.getOs_type()) || laptop.getOs_type().equalsIgnoreCase("n/a"))
-                /*&& (this.getNew_one() == laptop.getNew_one())*/) {
+                (this.getOs_type().equalsIgnoreCase(laptop.getOs_type()) || laptop.getOs_type().equalsIgnoreCase("NONE"))
+        /* && (this.getNew_one() == laptop.getNew_one()) */) {
             return true;
         } else
             return false;
