@@ -69,7 +69,7 @@ public class program {
                             case (4): {
                                 System.out.print("Input RAM: ");
                                 line = input.next().toString();
-                                dummy.setRam(line);
+                                dummy.setRam(line);                                
                                 break;
                             }
                             case (5): {
