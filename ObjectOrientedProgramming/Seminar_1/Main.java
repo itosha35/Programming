@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal("Slon", 32, "true", "White",
-        "Mammal", new Owner("Stas"), 4);
+                "Mammal", new Owner("Stas"), 4);
         Animal animal1 = new Animal("Black", "Bird", 2);
         System.out.println(animal.getAge());
         animal.setAge(3);
@@ -16,20 +16,23 @@ public class Main {
         animal0.getAge();
         System.out.println(animal0);
         Animal cat = new Animal0();
-        List <Animal> animals = new ArrayList<>();
+
+        System.out.println(cat);
+        List<Animal> animals = new ArrayList<>();
         animals.add(new Dog(null, null, null));
         animals.add(new Cat(null, null, null));
         animals.add(cat);
         animals.add(animal);
         animals.add(animal1);
         System.out.println(animals);
-        // for (Animal item : animals) {
-        //     if (item instanceof Cat) {
-        //     ((Cat)item).FIndFood(3);
-        //     ((Cat)item).FIndFood();
-        //     }
-        // }
-        Cat barsik = new Cat(null,null,null);
-            barsik.Hunt();
+        for (Animal item : animals) {
+            if (item instanceof Animal0) {
+                // ((Cat)item).FIndFood(3);
+                // ((Cat)item).FIndFood();
+                System.out.println(((Animal0) item).getEyesCount());
+            }
+        }
+        Cat barsik = new Cat(null, null, null);
+        barsik.Hunt(1, 2, 3, 4, 5);
     }
 }
