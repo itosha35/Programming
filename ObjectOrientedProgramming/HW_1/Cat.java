@@ -3,9 +3,9 @@ package ObjectOrientedProgramming.HW_1;
 import java.util.Arrays;
 
 public class Cat extends Animal {
-
-    public Cat(String color, String species, Integer legsCount) {
-        super(color, species, legsCount, true, false, true);        
+    
+    public Cat(String name, String color, Integer legsCount) {
+        super(name, color, "CATS", legsCount, true, false, true);        
     }
 
     private void FIndFood() {
