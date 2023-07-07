@@ -10,7 +10,7 @@ public class Main {
         animals.add(new Bird("Jacky", "RED", 2));
         animals.add(new Cat("Lapuss", "GREY", 4));
         animals.add(new Dog("Charley", "BROWN", 4));
-        animals.add(new Fish("Dori", "MAGENTA"));
+        animals.add(new Fish("Dori", "MAGENTA"));        
         for (Animal el : animals) {
             System.out.print(el + " ");
             System.out.println(el.getStatus());
