@@ -2,10 +2,14 @@ package ObjectOrientedProgramming.HW_2;
 
 import java.util.Date;
 
-public class Doctor extends Human implements Heal{
+import javax.print.Doc;
+
+public class Doctor extends Human implements Heal {
+
+    private Integer force = 10;
 
     public Doctor(String name, Date brdate) {
-        super(name, brdate);        
+        super(name, brdate);
     }
 
     @Override
@@ -34,7 +38,15 @@ public class Doctor extends Human implements Heal{
 
     @Override
     public void toHeal(Object target) {
-        ((Human)target).setHP((Integer)((Human)target).getHP()/10);
+        ((Human) target).setHP(this.force);
     }
-    
+
+    @Override
+    public void imPower(Object helper) {
+        if ((Human) helper instanceof Nurse) {
+            this.force += 20;            
+        } else {this.force += 10;}
+            
+    }
+
 }

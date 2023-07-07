@@ -30,9 +30,13 @@ public class Main {
         doc.toHeal(doc);
         System.out.println(doc.getHP());
         Human human = new Human("Alex", null);
-        human.getIjure(40);
+        human.getIjure(70);
         System.out.println(human);
         System.out.println(human.getHP());
+        doc.toHeal(human);
+        System.out.println(human.getHP());
+        Nurse nurse = new Nurse("Jane", null);
+        doc.imPower(nurse);
         doc.toHeal(human);
         System.out.println(human.getHP());
     }
