@@ -1,8 +1,9 @@
 package ObjectOrientedProgramming.HW_2;
 
-public class Dog extends Animal implements Runable, Swimable {
+public class Dog extends Animal implements Runable, Swimable, Soundable {
 
     private Integer speed = 0;
+    private String say = "WOF";
 
     public Dog(String name, String color, Integer legsCount) {
         super(name, color, "DOGS", legsCount);
@@ -51,5 +52,20 @@ public class Dog extends Animal implements Runable, Swimable {
         else
             System.out.println("I'm not running right now");
     }
+
+    @Override
+    public void toSing() {
+        System.out.println(this.getSpecies()+ " says " + say);
+    }
+
+    @Override
+    public String getVoice() {
+        return this.say;
+    }
+
+    @Override
+    public void setVoice(String say) {
+        this.say = say;
+    }  
 
 }

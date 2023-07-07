@@ -7,6 +7,7 @@ public abstract class Animal {
     private String species;
     private Integer legsCount;    
     private String status = "STILL";
+    private Integer hp = 100;
 
     public String getStatus() {
         return status;
@@ -79,4 +80,14 @@ public abstract class Animal {
         this.species = species;
     }
 
+    public void getIjure(Integer damage){
+        this.hp = this.hp - damage;
+        if (this.hp <=10) System.out.println("Need Heal!!!");
+        if (this.hp <=0) dead(); 
+    }
+    private void dead(){
+        System.out.println("I went to Heaven...");
+        this.hp = 0;
+        this.setStatus("NOT ALIVE");  
+    }
 }

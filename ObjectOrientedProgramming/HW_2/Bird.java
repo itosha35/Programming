@@ -2,7 +2,7 @@ package ObjectOrientedProgramming.HW_2;
 
 public class Bird extends Animal implements Flyable, Soundable {
     private Integer speed;
-    private Integer voice;
+    private String say = "CHIK-CHIRIK";
 
     public Bird(String name, String color, Integer legsCount) {
         super(name, color, "BIRDS", legsCount);
@@ -16,25 +16,22 @@ public class Bird extends Animal implements Flyable, Soundable {
 
     @Override
     public void toSing() {
-        System.out.println("I " + this.getName() + "as a" + this.getSpecies() + " started singing...");
-        this.voice = 100;
-        
+        System.out.println(this.getSpecies()+ " says " + say);        
     }
 
     @Override
-    public Integer getVoice() {
-        return this.voice;
+    public String getVoice() {
+        return this.say;
     }
 
     @Override
     public Integer getFlySpeed() {
-        return this.speed;
-        
+        return this.speed;        
     }
 
     @Override
-    public void setVoice(Integer sound) {
-        this.voice = sound;
+    public void setVoice(String say) {
+        this.say = say;
     }
 
     @Override

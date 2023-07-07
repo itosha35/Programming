@@ -2,9 +2,10 @@ package ObjectOrientedProgramming.HW_2;
 
 import java.util.Arrays;
 
-public class Cat extends Animal implements Runable, Swimable {
+public class Cat extends Animal implements Runable, Swimable, Soundable {
 
     private Integer speed = 0;
+    private String say = "MYAOW";
 
     public Cat(String name, String color, Integer legsCount) {
         super(name, color, "CATS", legsCount);
@@ -75,5 +76,20 @@ public class Cat extends Animal implements Runable, Swimable {
     public void setRunSpeed(Integer speed) {
         if (this.getStatus().equalsIgnoreCase("go")) this.speed = speed;
         else System.out.println("I'm not running right now");
+    }
+
+    @Override
+    public void toSing() {
+        System.out.println(this.getSpecies()+ " says " + say);
+    }
+
+    @Override
+    public String getVoice() {
+        return this.say;
+    }
+
+    @Override
+    public void setVoice(String say) {
+        this.say = say;
     }
 }
