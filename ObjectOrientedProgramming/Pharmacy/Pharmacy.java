@@ -95,4 +95,9 @@ public class Pharmacy implements Iterable<Component>, Comparable<Pharmacy> {
         return checks;
     }
 
+    @Override
+    public int hashCode() {        
+        return super.hashCode();
+    }
+    
 }
