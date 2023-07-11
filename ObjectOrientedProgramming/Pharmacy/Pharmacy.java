@@ -29,7 +29,7 @@ public class Pharmacy implements Iterable<Component>, Comparable<Pharmacy> {
 
     @Override
     public String toString() {
-        return "Pharmacy " + this.num + " [components=" + components + ", index=" + componentscount + "]";
+        return "\n Pharmacy " + this.num + " [components=" + components + ", index=" + componentscount + "] \n";
     }
 
     @Override
@@ -81,6 +81,7 @@ public class Pharmacy implements Iterable<Component>, Comparable<Pharmacy> {
         return components;
     }
 
+    @Override
     public boolean equals(Pharmacy o) {
         boolean checks = false;
         for (Component el1 : this.getComponents()) {

@@ -41,10 +41,11 @@ public class Main {
                     result.add(pharm);
                 }
             } else
-                result.add(pharm);
-                
+                result.add(pharm);                
         }
         System.out.println("HASH SET has " + result.size() + " components");
+        System.out.println("====================");
+        System.out.println(result);
 
     }
 }
