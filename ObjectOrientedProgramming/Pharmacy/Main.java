@@ -30,7 +30,7 @@ public class Main {
         nomenclature.add(pharmacy3);
         nomenclature.add(pharmacy1);
         nomenclature.add(pharmacy2);
-        nomenclature.sort(null);
+        Collections.sort(nomenclature);
         Pharmacy pharmacy4 = pharmacy2;
         nomenclature.add(pharmacy4);
         pharmacy4.setNum(4);
