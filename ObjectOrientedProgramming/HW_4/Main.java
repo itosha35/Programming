@@ -15,6 +15,11 @@ public class Main {
         System.out.println(gbList);
         gbList.addFromIndex(111, 5);
         System.out.println(gbList);
-        
+        gbList.addFromIndex(12345, gbList.size());
+        System.out.println(gbList);
+        gbList.addFromIndex(12345, gbList.size());
+        System.out.println(gbList);
+        gbList.addFromIndex(12345, gbList.size());
+        System.out.println(gbList);
     }
 }
