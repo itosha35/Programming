@@ -12,5 +12,7 @@ public class Main {
         for (String line : nums) {
             System.out.println(line);
         }
+        nums.join("ccc").join("abvgd");
+        System.out.println(nums);
     }
 }

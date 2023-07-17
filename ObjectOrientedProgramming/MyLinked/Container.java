@@ -132,8 +132,8 @@ public class Container<E> implements Linked<E>, Iterable<E>, DescIterator<E> {
 
     @Override
     public Container<E> join(E e) {
-      
-       return null;
+        addLast(e);
+        return this;
     }
 
 }
