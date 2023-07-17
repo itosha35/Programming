@@ -134,5 +134,6 @@ public class Container<E> implements Linked<E>, Iterable<E>, DescIterator<E> {
     public Container<E> join(E e) {
       
        return null;
+    }
 
 }
