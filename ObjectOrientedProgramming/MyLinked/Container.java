@@ -132,8 +132,7 @@ public class Container<E> implements Linked<E>, Iterable<E>, DescIterator<E> {
 
     @Override
     public Container<E> join(E e) {
-         node_first = new Node<E>(null, null, next);
-         node_first = new Node<E>(null, null, next);
+      
        return null;
 
 }
