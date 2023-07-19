@@ -33,3 +33,12 @@ h2{
     line-height: 30px;
     color: #7D7987
 }
+.input {
+    width: 350;
+    height: 150;
+    outline: none;
+    border: 2px solid color #0b0055;
+    font-size: 15px;
+    line-height: 30px;
+    border-radius: 15px;
+}
