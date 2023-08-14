@@ -1,0 +1,55 @@
+.background{
+    background: #fff;
+}
+.menu{
+    width: 1170px;
+    height: 40px;
+    flex-shrink: 0; 
+    
+}
+.link_Home{
+    color: #F25822;
+    font-family: Gilroy-SemiBold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    float: left;
+    gap: 50px;
+   
+}
+.links{
+    color: #000;
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   float: left;
+   gap: 50px;
+}
+.logo_txt_part1{
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    top: 140px; 
+}
+
+.logo_txt_part2{
+    color: #F25822;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    gap: 50px;
+}
+
+
+
+
