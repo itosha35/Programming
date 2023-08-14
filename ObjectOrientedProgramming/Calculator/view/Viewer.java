@@ -24,35 +24,38 @@ public class Viewer implements View {
     public void start() {
         Scanner in = new Scanner(System.in).useDelimiter("\r?\n");
         System.out.println("""
-                ___________________COMPLEX_NUMBER_CALCULATOR____________________
-                ИНСТУКЦИЯ:
-                операции (+, -, *, /), значения вводите в формате:\s
-                <Действительное Мнимое СимволОперации Действительное Мнимое>
-                 " c " для получения журнала """);
+                ==COMPLEX_VALUES_CALCULATOR==
+                SET: +, -, *, /.
+                FORMAT AS: <REAL IM OPERATION REAL IM>
+                 Set " l " for logger """);
         String key = in.next().toLowerCase();
         CalculatorComplex calculator;
         Complex result = null;
-        while (!key.equals("c")) {
+        while (!key.equals("l")) {
             if (status == Status.FIRST) {
                 calculator = new CalculatorComplex(key);
                 status = Status.NEXT;
             } else calculator = new CalculatorComplex(result, key);
             result = controller.sendComplex(calculator);
             logging.add(new Log(calculator, result));
-            System.out.print(result);
+            System.out.print(result+"\n");
+            System.out.println("Ready for next operation:");
             key = in.next().toLowerCase();
         }
         in.nextLine();
-        loggingGame(in, logging);
+        loggingRun(in, logging);
     }
 
-    private static void loggingGame(Scanner scanner, List<Log> logging) {
-        System.out.print("Хотите посмотреть логи? Y/N: ");
+    private static void loggingRun(Scanner scanner, List<Log> logging) {
+        System.out.print("SHOW LOGS? Y/N: ");
         String input = scanner.next();
         if (input.toUpperCase().equals("Y")) {
+            if (!logging.isEmpty()) {
             for (Log log : logging) {
                 System.out.println(log);
             }
+        }
+        else System.out.println("The log is empty, no operations been proceeded");
         }
     }
 }
