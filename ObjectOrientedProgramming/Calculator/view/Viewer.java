@@ -1,6 +1,5 @@
 package view;
 
-
 import controllers.Controller;
 import controllers.V1Controller;
 import data.CalculatorComplex;
@@ -26,7 +25,7 @@ public class Viewer implements View {
         System.out.println("""
                 ==COMPLEX_VALUES_CALCULATOR==
                 SET: +, -, *, /.
-                FORMAT AS: <REAL IM OPERATION REAL IM>
+                FORMAT AS: REAL_num IM_num OPERATION REAL_num IM_num
                  Set " l " for logger """);
         String key = in.next().toLowerCase();
         CalculatorComplex calculator;
@@ -35,14 +34,16 @@ public class Viewer implements View {
             if (status == Status.FIRST) {
                 calculator = new CalculatorComplex(key);
                 status = Status.NEXT;
-            } else calculator = new CalculatorComplex(result, key);
+            } else
+                calculator = new CalculatorComplex(result, key);
             result = controller.sendComplex(calculator);
             logging.add(new Log(calculator, result));
-            System.out.print(result+"\n");
+            System.out.print(result + "\n");
             System.out.println("Ready for next operation:");
             key = in.next().toLowerCase();
         }
         in.nextLine();
+
         loggingRun(in, logging);
     }
 
@@ -51,11 +52,11 @@ public class Viewer implements View {
         String input = scanner.next();
         if (input.toUpperCase().equals("Y")) {
             if (!logging.isEmpty()) {
-            for (Log log : logging) {
-                System.out.println(log);
-            }
-        }
-        else System.out.println("The log is empty, no operations been proceeded");
+                for (Log log : logging) {
+                    System.out.println(log);
+                }
+            } else
+                System.out.println("The log is empty, no operations been proceeded");
         }
     }
 }
